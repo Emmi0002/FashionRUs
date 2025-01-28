@@ -1,15 +1,16 @@
 html {
   margin: 0;
   padding: 0;
-  --primary_color: #8eac8e;
+  --primary_color: #f2f2f2;
   --secondary_color: #f20004;
-  --button_color: rgb(61, 105, 61, 0.6);
-  --button_color_pressed: rgb(61, 105, 61, 0.2);
+  --button_color: rgb(252, 35, 38);
+  --button_color_pressed: rgb(252, 35, 38, 0.2);
+  --readMore_color: #ababab;
 }
 
 #body_background_color {
   background-color: var(--primary_color);
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -35,15 +36,18 @@ nav li {
 nav li:hover {
   background-color: var(--button_color_pressed);
   font-weight: 800;
-  font-size: 20px;
+  cursor: pointer;
+}
+nav a:hover {
+  color: var(--button_color);
 }
 
 nav a {
   text-decoration: none;
   margin: 0 auto;
   text-align: center;
-  color: black;
-  font-size: 19px;
+  color: rgb(248, 248, 248);
+  font-size: 20px;
 }
 
 h1 {
@@ -58,3 +62,154 @@ h1 {
 
 /************** Produktliste ************/
 
+header h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.main_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid_1-1 p {
+  align-items: center;
+  margin: 0;
+}
+
+.grid_1-1 section {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  padding-bottom: 0;
+}
+
+.grid_1-1 section p {
+  padding: 5px;
+  background-color: var(--readMore_color);
+  border-radius: 15px;
+  text-align: center;
+  margin: 0;
+  font-size: 12px;
+}
+
+/**** Burger Menu ****/
+.burger-menu {
+  font-size: 2rem;
+  cursor: pointer;
+  color: black;
+  right: 0;
+  padding-right: 20px;
+  top: 10px;
+  z-index: 888;
+  position: fixed;
+}
+
+#burger-toggle {
+  display: none;
+}
+
+#nav-bar {
+  height: 50px;
+  padding: 10px;
+}
+
+#nav-bar ul {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 35px;
+  padding-right: 25px;
+  list-style-type: none;
+  text-align: right;
+  background-color: var(--secondary_color);
+  margin: 20px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+#burger-toggle:checked + label + #nav-bar ul {
+  display: block;
+}
+
+#burger-toggle:checked + label {
+  color: var(--button_color);
+}
+
+#nav-bar a {
+  padding: 3px;
+  line-height: 1.5rem;
+  width: 100%;
+  display: inline-block;
+  font-size: 25px;
+  color: var(--primary_color);
+  text-decoration: none;
+  text-align: right;
+}
+
+#nav-bar a:hover{
+  text-decoration: underline;
+}
+
+#nav-bar li {
+  background-color: transparent;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  padding: 0;
+  font-size: 0px;
+  margin-left: 20px;
+}
+
+/***************** Produkt ****************/
+
+.size{
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.grid_1-1-1{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid_1-1-1 p{
+  background-color: var(--readMore_color);
+  margin: 8px;
+  padding: 5px;
+  text-align: center;
+}
+
+.InventoryNr{
+  color: #ababab;
+}
+
+.AddToBasket{
+  text-align: center;
+  background-color: #3D693D;
+  color: white;
+  padding: 10px;
+  margin: 5px 80px;
+  margin-top: 40px;
+  border-radius: 20px;
+}
+
+/********** footer ***********/
+
+footer{
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
