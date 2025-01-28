@@ -7,7 +7,7 @@ html {
   --button_color_pressed: rgb(61, 105, 61, 0.2);
 }
 
-body {
+#body_background_color {
   background-color: var(--primary_color);
   color: white;
   text-align: center;
