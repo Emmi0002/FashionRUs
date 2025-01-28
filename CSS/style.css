@@ -1,0 +1,35 @@
+html {
+  margin: 0;
+  padding: 0;
+  --primary_color: #3d693d;
+  --secondary_color: #f20004;
+}
+
+body {
+  background-color: var(--primary_color);
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav a {
+  text-decoration: none;
+  margin: 0 auto;
+  text-align: center;
+  margin: 50px 0;
+  padding: 50px;
+}
+
+#highlight {
+  color: var(--secondary_color);
+  transform: scaleX(-1);
+  display: inline-block;
+}
