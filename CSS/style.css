@@ -162,7 +162,7 @@ img {
   text-align: right;
 }
 
-#nav-bar a:hover{
+#nav-bar a:hover {
   text-decoration: underline;
 }
 
@@ -174,32 +174,80 @@ img {
   margin-left: 20px;
 }
 
+@media (width > 700px) {
+  #burger-toggle,
+  .burger-menu {
+    display: none;
+  }
+
+  #nav-bar ul {
+    display: flex;
+    position: static;
+    position: relative;
+    top: 20px;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    justify-content: flex-end;
+  }
+
+  #nav-bar li {
+    font-size: 1rem;
+    margin: 0 10px;
+  }
+
+  #nav-bar a {
+    font-size: 16px;
+    color: var(--primary_color);
+    text-decoration: none;
+    position: relative;
+    top: -85px;
+    color: var(--secondary_color);
+    padding-right: 30px;
+    font-size: 20px;
+  }
+
+  #nav-bar a:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (width > 1200px) {
+  .main_grid {
+    gap: 30px;
+  }
+
+  .grid_1-1 section p {
+    margin: 0 20px;
+  }
+}
+
 /***************** Produkt ****************/
 
-.size{
+.size {
   font-size: 23px;
   font-weight: 600;
 }
 
-.grid_1-1-1{
+.grid_1-1-1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
-.grid_1-1-1 p{
+.grid_1-1-1 p {
   background-color: var(--readMore_color);
   margin: 8px;
   padding: 5px;
   text-align: center;
 }
 
-.InventoryNr{
+.InventoryNr {
   color: #ababab;
 }
 
-.AddToBasket{
+.AddToBasket {
   text-align: center;
-  background-color: #3D693D;
+  background-color: #3d693d;
   color: white;
   padding: 10px;
   margin: 5px 80px;
@@ -207,9 +255,47 @@ img {
   border-radius: 20px;
 }
 
+@media (width > 480px) {
+  main > img {
+    max-width: 400px;
+  }
+}
+
+@media (width > 700px) {
+  .gridProdukt_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  main > img {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (width > 1400px) {
+  main > img {
+    width: 100%;
+    max-height: 535px;
+    margin: 0 auto;
+  }
+
+  .grid_1-1-1 p {
+    background-color: var(--readMore_color);
+    margin: 10px;
+    padding: 8px;
+    text-align: center;
+  }
+}
+
 /********** footer ***********/
 
-footer{
+footer {
   margin-top: 100px;
   margin-bottom: 20px;
 }
