@@ -77,6 +77,11 @@ h2 {
   gap: 20px;
 }
 
+.main_grid img{
+  position: relative;
+  object-fit: cover;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -298,4 +303,37 @@ img {
 footer {
   margin-top: 100px;
   margin-bottom: 20px;
+}
+
+/******** Sold Out **********/
+
+.SoldOut {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent sort baggrund */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 250%;
+  letter-spacing: 2px;
+  font-weight: 190;
+}
+
+.old_price {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.new_price {
+  font-weight: bold;
+  color: var(--secondary_color);
+}
+
+.discount {
+  position: absolute;
+  left: 114px;
+  top: 984px;
+  background: var(--secondary_color);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
 }
