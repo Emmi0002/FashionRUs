@@ -11,7 +11,7 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
       <img src="https://kea-alt-del.dk/t7/images/webp/640/${productId}.webp" alt="sko" />
       <div>
         <h3>${data.productdisplayname}</h3>
-        <p>Price: ${data.price}</p>
+        <p>${data.price} DKK</p>
         <p>Color: ${data.basecolour}</p>
         <p class="size">Size</p>
         <section class="grid_1-1-1">
