@@ -54,6 +54,12 @@ h1 {
   font-size: 4rem;
 }
 
+header > a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: black;
+}
+
 #highlight {
   color: var(--secondary_color);
   transform: scaleX(-1);
@@ -71,13 +77,13 @@ h2 {
   text-align: center;
 }
 
-.product_list_container{
+.product_list_container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
 }
 
-.product_list_container img{
+.product_list_container img {
   position: relative;
   object-fit: cover;
 }
@@ -245,6 +251,7 @@ img {
   margin: 8px;
   padding: 5px;
   text-align: center;
+  color: white;
 }
 
 .InventoryNr {
@@ -319,6 +326,19 @@ footer {
   font-weight: 190;
 }
 
+.SoldOut_product {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent sort baggrund */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 250%;
+  letter-spacing: 2px;
+  font-weight: 190;
+  padding: 10px;
+}
+
 .old_price {
   text-decoration: line-through;
   color: gray;
@@ -326,15 +346,61 @@ footer {
 
 .new_price {
   font-weight: bold;
-  color: var(--secondary_color);
+  /* color: var(--secondary_color); */
 }
 
-.discount {
-  position: absolute;
-  left: 114px;
-  top: 984px;
-  background: var(--secondary_color);
+/* .discountlabel {
+  /* position: absolute; */
+/* left: 114px; */
+/* top: 984px; */
+/* background: var(--secondary_color); */
+/* color: black; */
+/* padding: 5px; */
+/* border-radius: 5px; */
+/* } */
+
+.discountlabel_2 {
+  background-color: var(--secondary_color);
   color: white;
-  padding: 5px;
-  border-radius: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-right: 195px;
+  font-size: 1.25em;
+}
+
+.discountlabel_product {
+  background-color: var(--secondary_color);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-right: 637px;
+  font-size: 1.25em;
+}
+
+@media (width < 700px) {
+  .SoldOut_product {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent sort baggrund */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 250%;
+    letter-spacing: 2px;
+    font-weight: 190;
+    padding: 10px;
+    top: 140px;
+  }
+
+  .discountlabel_product {
+    background-color: var(--secondary_color);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-right: 70%;
+    font-size: 1.25em;
+  }
 }
